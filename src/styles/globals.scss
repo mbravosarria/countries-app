@@ -8,13 +8,15 @@
 
   --foreground-hsl: #{$very-dark-blue-light};
   --background-hsl: #{$very-light-gray};
+  --navbar-background-hsl: #{$very-light-gray};
+  --shadow-color: #{$light-shadow};
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-hsl: #{$white};
-    --background-hsl: #{$dark-blue};
-  }
+[data-theme='dark'] {
+  --foreground-hsl: #{$white};
+  --background-hsl: #{$very-dark-blue};
+  --navbar-background-hsl: #{$dark-blue};
+  --shadow-color: #{$dark-shadow};
 }
 
 * {

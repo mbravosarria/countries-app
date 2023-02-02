@@ -10,9 +10,11 @@ const ThemeSwitcher = dynamic(
 
 function NavBar() {
   return (
-    <div className={styles.container}>
-      <H1 className={styles.title}>Where in the world?</H1>
-      <ThemeSwitcher />
+    <div className={styles.root}>
+      <div className={styles.container}>
+        <H1 className={styles.title}>Where in the world?</H1>
+        <ThemeSwitcher />
+      </div>
     </div>
   )
 }
