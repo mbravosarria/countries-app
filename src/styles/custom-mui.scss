@@ -1,0 +1,44 @@
+.MuiMenuItem-root {
+  font-size: 0.85rem;
+  color: var(--input-text-hsl);
+  background-color: var(--element-background-hsl);
+
+  &:hover {
+    background-color: var(--element-background-hsl);
+  }
+}
+
+.MuiList-root {
+  background-color: var(--element-background-hsl);
+}
+
+.MuiPaper-root {
+  background-color: var(--element-background-hsl);
+  margin-top: 0.3rem;
+}
+
+.MuiInputBase-root {
+  color: var(--input-text-hsl);
+  background-color: var(--element-background-hsl);
+  border: 0;
+  border-radius: 8;
+}
+
+.MuiOutlinedInput-root {
+  font-size: 0.85rem;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  box-shadow: 0 1px 3px 0 var(--shadow-color),
+    0 1px 2px -1px var(--shadow-color);
+  border: 0;
+}
+
+.MuiFormLabel-root.Mui-focused {
+  color: var(--input-text-hsl);
+}
+
+.MuiFormLabel-root {
+  color: var(--input-text-hsl);
+  font-size: 0.85rem;
+}

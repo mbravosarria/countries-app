@@ -4,7 +4,10 @@
   padding-block: 1rem;
   box-shadow: 0 1px 3px 0 var(--shadow-color),
     0 1px 2px -1px var(--shadow-color);
-  background-color: var(--navbar-background-hsl);
+  background-color: var(--element-background-hsl);
+  position: absolute;
+  width: 100%;
+  // top: 0;
 }
 
 .container {
@@ -28,4 +31,26 @@
   @media (min-width: $breakpoint-mobile) {
     font-size: x-large;
   }
+}
+
+.switcherContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.switcherIcon {
+  position: relative;
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.3rem;
+}
+
+.switcherText {
+  font-size: small;
+  font-weight: bold;
 }

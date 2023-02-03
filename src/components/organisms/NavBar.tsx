@@ -1,6 +1,6 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
-import styles from '@/styles/nav-bar.module.scss'
+import styles from '@/styles/layout.module.scss'
 
 const H1 = dynamic(() => import('@/components/atoms/H1'))
 

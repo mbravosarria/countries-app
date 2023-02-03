@@ -7,7 +7,7 @@ interface Props {
   [x: string]: any
 }
 
-function Icon({ src, alt, ...rest }: Props) {
+function Img({ src, alt, ...rest }: Props) {
   return (
     <div {...rest}>
       <Image src={src} alt={alt} fill />
@@ -15,4 +15,4 @@ function Icon({ src, alt, ...rest }: Props) {
   )
 }
 
-export default Icon
+export default Img

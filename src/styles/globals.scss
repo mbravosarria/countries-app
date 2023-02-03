@@ -8,14 +8,16 @@
 
   --foreground-hsl: #{$very-dark-blue-light};
   --background-hsl: #{$very-light-gray};
-  --navbar-background-hsl: #{$very-light-gray};
+  --element-background-hsl: #{$white};
+  --input-text-hsl: #{$dark-gray};
   --shadow-color: #{$light-shadow};
 }
 
 [data-theme='dark'] {
   --foreground-hsl: #{$white};
   --background-hsl: #{$very-dark-blue};
-  --navbar-background-hsl: #{$dark-blue};
+  --element-background-hsl: #{$dark-blue};
+  --input-text-hsl: #{$white};
   --shadow-color: #{$dark-shadow};
 }
 
@@ -45,4 +47,8 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+*:focus {
+  outline: none;
 }
