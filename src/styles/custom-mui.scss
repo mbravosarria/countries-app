@@ -21,7 +21,8 @@
   color: var(--input-text-hsl);
   background-color: var(--element-background-hsl);
   border: 0;
-  border-radius: 8;
+  border-radius: 8px;
+  height: 3rem;
 }
 
 .MuiOutlinedInput-root {
@@ -41,4 +42,8 @@
 .MuiFormLabel-root {
   color: var(--input-text-hsl);
   font-size: 0.85rem;
+}
+
+.MuiSvgIcon-root {
+  color: var(--input-text-hsl);
 }

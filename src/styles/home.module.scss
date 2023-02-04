@@ -29,7 +29,7 @@
   @media (min-width: $breakpoint-desktop) {
     flex-direction: row;
     justify-content: space-between;
-    width: 98%;
+    width: 100%;
   }
 }
 
@@ -51,17 +51,13 @@
 
 .searchInputField {
   border: 0;
-  padding-block: 1.4rem;
+  padding-block: 1.1rem;
   background-color: var(--element-background-hsl);
   color: var(--input-text-hsl) !important;
   width: -webkit-fill-available;
 
   &::placeholder {
     color: var(--input-text-hsl) !important;
-  }
-
-  @media (min-width: $breakpoint-desktop) {
-    padding-block: 1rem;
   }
 }
 
@@ -78,4 +74,80 @@
   @media (min-width: $breakpoint-mobile) {
     width: 25%;
   }
+}
+
+.infoLine {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.9rem;
+  color: var(--input-text-hsl);
+}
+
+.infoLineLabel {
+  font-weight: bold;
+  margin-right: 0.3rem;
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.countriesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-block: 3rem;
+  margin-inline: 4rem;
+
+  @media (min-width: $breakpoint-mobile) {
+    margin-inline: 3rem;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-inline: 0;
+  }
+}
+
+.countryCard {
+  background-color: var(--element-background-hsl);
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 var(--shadow-color),
+    0 1px 2px -1px var(--shadow-color);
+  margin-bottom: 3rem;
+
+  @media (min-width: $breakpoint-mobile) {
+    width: 45%;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 21%;
+  }
+}
+
+.countryCardInfo {
+  padding: 1rem;
+}
+
+.countryCardImg {
+  position: relative;
+  width: 100%;
+  height: 11rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+
+  @media (min-width: $breakpoint-mobile) {
+    height: 12.5rem;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    height: 9rem;
+  }
+}
+
+.countryCardTitle {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }

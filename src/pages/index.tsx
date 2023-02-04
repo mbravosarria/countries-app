@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/home.module.scss'
 import dynamic from 'next/dynamic'
+import { AxiosInstance } from '@/configurations/axios'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -9,7 +10,11 @@ const CountriesBoard = dynamic(
   () => import('@/components/templates/CountriesBoard')
 )
 
-export default function Home() {
+interface Props {
+  data: Array<any>
+}
+
+export default function Home({ data }: Props) {
   return (
     <>
       <Head>
@@ -22,8 +27,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <CountriesBoard />
+        <CountriesBoard data={data} />
       </main>
     </>
   )
+}
+
+export async function getServerSideProps() {
+  const res = await AxiosInstance.get('/api/countries')
+  const data = res.data.data
+
+  // Pass data to the page via props
+  return { props: { data } }
 }

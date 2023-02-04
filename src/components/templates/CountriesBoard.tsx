@@ -9,11 +9,15 @@ const CountriesList = dynamic(
   () => import('@/components/organisms/CountriesList')
 )
 
-function CountriesBoard() {
+interface Props {
+  data: Array<any>
+}
+
+function CountriesBoard({ data }: Props) {
   return (
     <div className={styles.boardContainer}>
       <CountriesFilter />
-      <CountriesList />
+      <CountriesList data={data} />
     </div>
   )
 }
