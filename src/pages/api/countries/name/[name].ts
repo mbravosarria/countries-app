@@ -10,8 +10,10 @@ export default function handler(
   res: NextApiResponse<Data>
 ) {
   const { name } = req.query
-  const answer = countries.map((item) => {
-    if (name && item.name.indexOf(name?.toString()) !== -1) return item
-  })
+  const answer = countries.filter(
+    (item) =>
+      name &&
+      item.name.toLowerCase().indexOf(name?.toString().toLowerCase()) !== -1
+  )
   res.status(200).json({ data: answer })
 }

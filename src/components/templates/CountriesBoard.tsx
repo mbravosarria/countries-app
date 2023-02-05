@@ -11,12 +11,18 @@ const CountriesList = dynamic(
 
 interface Props {
   data: Array<any>
+  setCountriesByName: Function
+  setCountriesByRegion: Function
 }
 
-function CountriesBoard({ data }: Props) {
+function CountriesBoard({
+  data,
+  setCountriesByName,
+  setCountriesByRegion,
+}: Props) {
   return (
     <div className={styles.boardContainer}>
-      <CountriesFilter />
+      <CountriesFilter {...{ setCountriesByName, setCountriesByRegion }} />
       <CountriesList data={data} />
     </div>
   )

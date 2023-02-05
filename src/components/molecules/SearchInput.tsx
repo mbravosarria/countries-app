@@ -8,7 +8,11 @@ import searchDark from '../../../public/assets/svg/search-dark.svg'
 const Input = dynamic(() => import('@/components/atoms/Input'))
 const Img = dynamic(() => import('@/components/atoms/Img'))
 
-function SearchInput() {
+interface Props {
+  setCountriesByName: Function
+}
+
+function SearchInput({ setCountriesByName }: Props) {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
 
@@ -31,6 +35,7 @@ function SearchInput() {
         type="text"
         className={styles.searchInputField}
         placeholder="Search for a country..."
+        onChange={setCountriesByName}
       />
     </div>
   )

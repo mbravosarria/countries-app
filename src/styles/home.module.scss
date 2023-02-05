@@ -96,7 +96,7 @@
 .countriesList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  // justify-content: space-between;
   margin-block: 3rem;
   margin-inline: 4rem;
 
@@ -116,6 +116,7 @@
   box-shadow: 0 1px 3px 0 var(--shadow-color),
     0 1px 2px -1px var(--shadow-color);
   margin-bottom: 3rem;
+  margin-inline: 1.25rem;
 
   @media (min-width: $breakpoint-mobile) {
     width: 45%;

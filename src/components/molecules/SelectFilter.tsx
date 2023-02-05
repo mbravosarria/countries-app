@@ -6,16 +6,24 @@ const MuiSelect = dynamic(() => import('@/components/atoms/MuiSelect'))
 
 const options = [
   { value: 'Africa', label: 'Africa' },
-  { value: 'America', label: 'America' },
+  { value: 'Americas', label: 'Americas' },
   { value: 'Asia', label: 'Asia' },
   { value: 'Europe', label: 'Europe' },
   { value: 'Oceania', label: 'Oceania' },
 ]
 
-function SelectFilter() {
+interface Props {
+  setCountriesByRegion: Function
+}
+
+function SelectFilter({ setCountriesByRegion }: Props) {
   return (
     <div className={styles.selectFilter}>
-      <MuiSelect options={options} label="Filter by Region" />
+      <MuiSelect
+        options={options}
+        label="Filter by Region"
+        onChange={setCountriesByRegion}
+      />
     </div>
   )
 }

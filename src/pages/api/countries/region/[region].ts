@@ -10,8 +10,6 @@ export default function handler(
   res: NextApiResponse<Data>
 ) {
   const { region } = req.query
-  const answer = countries.map((item) => {
-    if (item.region === region) return item
-  })
+  const answer = countries.filter((item) => item.region === region)
   res.status(200).json({ data: answer })
 }

@@ -12,20 +12,20 @@ interface Props {
 
 function CountryCard({ data }: Props) {
   const infoList = [
-    { label: 'Population', value: data.population },
-    { label: 'Region', value: data.region },
-    { label: 'Capital', value: data.capital },
+    { label: 'Population', value: data?.population },
+    { label: 'Region', value: data?.region },
+    { label: 'Capital', value: data?.capital },
   ]
 
   return (
     <div className={styles.countryCard}>
       <Img
         className={styles.countryCardImg}
-        src={data.flag}
-        alt={data.alpha3Code}
+        src={data?.flag}
+        alt={data?.alpha3Code}
       />
       <div className={styles.countryCardInfo}>
-        <H2 className={styles.countryCardTitle}>{data.name}</H2>
+        <H2 className={styles.countryCardTitle}>{data?.name}</H2>
         <InfoBlock data={infoList} />
       </div>
     </div>

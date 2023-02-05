@@ -7,11 +7,16 @@ const SelectFilter = dynamic(
   () => import('@/components/molecules/SelectFilter')
 )
 
-function CountriesFilter() {
+interface Props {
+  setCountriesByName: Function
+  setCountriesByRegion: Function
+}
+
+function CountriesFilter({ setCountriesByName, setCountriesByRegion }: Props) {
   return (
     <div className={styles.filterBarContainer}>
-      <SearchInput />
-      <SelectFilter />
+      <SearchInput setCountriesByName={setCountriesByName} />
+      <SelectFilter setCountriesByRegion={setCountriesByRegion} />
     </div>
   )
 }

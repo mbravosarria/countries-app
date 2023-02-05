@@ -1,49 +1,49 @@
 .MuiMenuItem-root {
-  font-size: 0.85rem;
-  color: var(--input-text-hsl);
-  background-color: var(--element-background-hsl);
+  font-size: 0.85rem !important;
+  color: var(--input-text-hsl) !important;
+  background-color: var(--element-background-hsl) !important;
 
   &:hover {
-    background-color: var(--element-background-hsl);
+    background-color: var(--element-background-hsl) !important;
   }
 }
 
 .MuiList-root {
-  background-color: var(--element-background-hsl);
+  background-color: var(--element-background-hsl) !important;
 }
 
 .MuiPaper-root {
-  background-color: var(--element-background-hsl);
-  margin-top: 0.3rem;
+  background-color: var(--element-background-hsl) !important;
+  margin-top: 0.3rem !important;
 }
 
 .MuiInputBase-root {
-  color: var(--input-text-hsl);
-  background-color: var(--element-background-hsl);
-  border: 0;
-  border-radius: 8px;
-  height: 3rem;
+  color: var(--input-text-hsl) !important;
+  background-color: var(--element-background-hsl) !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  height: 3rem !important;
 }
 
 .MuiOutlinedInput-root {
-  font-size: 0.85rem;
+  font-size: 0.85rem !important;
 }
 
 .MuiOutlinedInput-notchedOutline {
   box-shadow: 0 1px 3px 0 var(--shadow-color),
-    0 1px 2px -1px var(--shadow-color);
-  border: 0;
+    0 1px 2px -1px var(--shadow-color) !important;
+  border: 0 !important;
 }
 
 .MuiFormLabel-root.Mui-focused {
-  color: var(--input-text-hsl);
+  color: var(--input-text-hsl) !important;
 }
 
 .MuiFormLabel-root {
-  color: var(--input-text-hsl);
-  font-size: 0.85rem;
+  color: var(--input-text-hsl) !important;
+  font-size: 0.85rem !important;
 }
 
 .MuiSvgIcon-root {
-  color: var(--input-text-hsl);
+  color: var(--input-text-hsl) !important;
 }

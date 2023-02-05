@@ -12,7 +12,7 @@ function CountriesList({ data }: Props) {
   return (
     <div className={styles.countriesList}>
       {data?.map((item) => (
-        <CountryCard key={item.alpha2Code} data={item} />
+        <CountryCard key={item?.alpha2Code} data={item} />
       ))}
     </div>
   )
