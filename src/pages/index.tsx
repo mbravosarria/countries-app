@@ -12,7 +12,7 @@ interface Props {
   data: Array<any>
 }
 
-export default function Home({ data }: Props) {
+export default function HomePage({ data }: Props) {
   const [mounted, setMounted] = useState(false)
   const [countriesDisplay, setCountriesDisplay] = useState(data)
 
@@ -69,6 +69,5 @@ export async function getServerSideProps() {
   const res = await AxiosInstance.get('/api/countries')
   const data = res.data.data
 
-  // Pass data to the page via props
   return { props: { data } }
 }

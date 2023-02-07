@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '@/styles/home.module.scss'
 import dynamic from 'next/dynamic'
+import { SelectFilterProps } from '@/configurations/interfaces'
 
 const MuiSelect = dynamic(() => import('@/components/atoms/MuiSelect'))
 
@@ -12,11 +13,7 @@ const options = [
   { value: 'Oceania', label: 'Oceania' },
 ]
 
-interface Props {
-  setCountriesByRegion: Function
-}
-
-function SelectFilter({ setCountriesByRegion }: Props) {
+function SelectFilter({ setCountriesByRegion }: SelectFilterProps) {
   return (
     <div className={styles.selectFilter}>
       <MuiSelect

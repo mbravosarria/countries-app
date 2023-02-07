@@ -1,1 +1,128 @@
 @import 'variables.module';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 6rem;
+  min-height: 100vh;
+  margin: auto;
+
+  @media (min-width: $breakpoint-desktop-large) {
+    max-width: $max-width;
+  }
+}
+
+.backButton {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--element-background-hsl);
+  border: 0;
+  box-shadow: 0 1px 3px 0 var(--shadow-color),
+    0 1px 2px -1px var(--shadow-color);
+  padding-right: 1rem;
+  padding-left: 0.5rem;
+  padding-block: 0.5rem;
+}
+
+.backButtonIcon {
+  position: relative;
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.3rem;
+}
+
+.countryDetails {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+}
+
+.countryDetailsBoxesContainer {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.countryDetailsBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.countryDetailsInfo {
+  @media (min-width: $breakpoint-tablet) {
+    width: 55%;
+  }
+}
+
+.countryDetailsImg {
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  margin-block: 3rem;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 40%;
+    height: 18rem;
+  }
+}
+
+.countryDetailsName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: 3rem;
+  }
+}
+
+.firstInfoBlock {
+  margin-bottom: 2rem;
+}
+
+.chipList {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.chipListLabel {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.chipListItems {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-top: 0;
+  }
+}
+
+.chipAtom {
+  margin-right: 0.5rem;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  background-color: var(--element-background-hsl);
+  box-shadow: 0 1px 3px 0 var(--shadow-color),
+    0 1px 2px -1px var(--shadow-color);
+}

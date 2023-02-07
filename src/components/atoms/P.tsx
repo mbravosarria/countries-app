@@ -1,11 +1,7 @@
 import React from 'react'
+import { TextProps } from '@/configurations/interfaces'
 
-interface Props {
-  children: React.ReactNode
-  [x: string]: any
-}
-
-function P({ children, ...rest }: Props) {
+function P({ children, ...rest }: TextProps) {
   return <p {...rest}>{children}</p>
 }
 

@@ -1,11 +1,7 @@
 import React from 'react'
+import { InputProps } from '@/configurations/interfaces'
 
-interface Props {
-  type: string
-  [x: string]: any
-}
-
-function Input({ type, ...rest }: Props) {
+function Input({ type, ...rest }: InputProps) {
   return <input type={type} {...rest} />
 }
 

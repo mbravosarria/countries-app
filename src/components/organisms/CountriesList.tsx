@@ -1,14 +1,11 @@
 import React from 'react'
 import styles from '@/styles/home.module.scss'
 import dynamic from 'next/dynamic'
+import { CountriesListProps } from '@/configurations/interfaces'
 
 const CountryCard = dynamic(() => import('@/components/organisms/CountryCard'))
 
-interface Props {
-  data: Array<any>
-}
-
-function CountriesList({ data }: Props) {
+function CountriesList({ data }: CountriesListProps) {
   return (
     <div className={styles.countriesList}>
       {data?.map((item) => (

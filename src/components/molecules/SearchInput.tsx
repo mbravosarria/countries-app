@@ -4,15 +4,12 @@ import dynamic from 'next/dynamic'
 import { useTheme } from 'next-themes'
 import searchLight from '../../../public/assets/svg/search-light.svg'
 import searchDark from '../../../public/assets/svg/search-dark.svg'
+import { SearchInputProps } from '@/configurations/interfaces'
 
 const Input = dynamic(() => import('@/components/atoms/Input'))
 const Img = dynamic(() => import('@/components/atoms/Img'))
 
-interface Props {
-  setCountriesByName: Function
-}
-
-function SearchInput({ setCountriesByName }: Props) {
+function SearchInput({ setCountriesByName }: SearchInputProps) {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
 

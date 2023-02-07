@@ -1,13 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
+import { ImgProps } from '@/configurations/interfaces'
 
-interface Props {
-  src: string
-  alt: string
-  [x: string]: any
-}
-
-function Img({ src, alt, ...rest }: Props) {
+function Img({ src, alt, ...rest }: ImgProps) {
   return (
     <div {...rest}>
       <Image src={src} alt={alt} fill />

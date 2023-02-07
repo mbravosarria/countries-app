@@ -1,18 +1,8 @@
 import React from 'react'
-
 import { MenuItem, TextField } from '@mui/material'
+import { MuiSelectProps } from '@/configurations/interfaces'
 
-interface Option {
-  value: any
-  label: string
-}
-
-interface Props {
-  options: Array<Option>
-  [x: string]: any
-}
-
-function MuiSelect({ options, ...rest }: Props) {
+function MuiSelect({ options, ...rest }: MuiSelectProps) {
   return (
     <TextField select fullWidth {...rest}>
       {options.map((item) => (

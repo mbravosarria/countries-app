@@ -1,11 +1,7 @@
 import React from 'react'
+import { TextProps } from '@/configurations/interfaces'
 
-interface Props {
-  children: React.ReactNode
-  [x: string]: any
-}
-
-function H1({ children, ...rest }: Props) {
+function H1({ children, ...rest }: TextProps) {
   return <h1 {...rest}>{children}</h1>
 }
 
