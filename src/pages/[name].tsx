@@ -39,9 +39,9 @@ export async function getStaticProps({ params }: any) {
   const country = countries.filter(
     (item) =>
       params.name &&
-      item.name.toLowerCase().indexOf(params.name?.toString().toLowerCase()) !==
+      item.name.toLowerCase().indexOf(params.name.toString().toLowerCase()) !==
         -1
-  )
+  )[0]
 
   return {
     props: {
